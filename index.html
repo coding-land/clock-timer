@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>clock timer</title>
+    <meta name="description" content="Free And Easy To Use clock timer">
+    <meta name="keywords" content="clock timer">
+    <meta name="author" content="Aryan Sharma">
+    <link rel="icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"> <span
+                    class="fs-4">clock-timer</span> </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="index1.html" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="index2.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index3.html" class="nav-link">Testimonial</a></li>
+            </ul>
+        </header>
+    </div>
+    <div id="clock">
+        <div class="Day-Div">
+            <h1 class="h1">Hours</h1>
+            <h2 class="h2" id="Hours">00</h2>
+        </div>
+        <div class="Month-Div">
+            <h1 class="h1">Minutes</h1>
+            <h2 class="h2" id="Minutes">00</h2>
+        </div>
+        <div class="Year-Div">
+            <h1 class="h1">Seconds</h1>
+            <h2 class="h2" id="Seconds">00</h2>
+        </div>
+        <div class="Date" id="Main-Date">
+            <center>
+                <div class="center-div" id="Main-Div2">
+                    <h3 style="display: inline-block;margin-right: 5px;">Date</h3> <button onclick="myfunction()"
+                        id="arrow-right"><i class="fa fa-arrow-right" id="arrow"></i></button>
+                    <h3 style="display: inline-block;margin-left: 5px;" id="h3">The Date In Your Country Is</h3>
+                </div>
+            </center>
+        </div>
+    </div>
+    <script>function clock() { var seconds = document.getElementById('Seconds'); var minutes = document.getElementById('Minutes'); var hours = document.getElementById('Hours'); var a = new Date().getSeconds(); var b = new Date().getMinutes(); var c = new Date().getHours(); seconds.innerHTML = a; minutes.innerHTML = b; hours.innerHTML = c; } var time = setInterval(clock, 1000); function myfunction() { var a = document.getElementById('arrow-right'); var b = document.getElementById('arrow'); b.style.transform = "rotate(0deg)"; b.style.transition = ".1s"; var c = new Date(); var d = document.getElementById("h3").innerHTML = c; var f = document.getElementsByClassName('center-div'); }</script>
+</body>
+
+</html>
